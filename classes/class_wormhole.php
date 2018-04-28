@@ -24,6 +24,7 @@
 			
 			// Sanitise input
 			$locusID = str_replace("_", " ", $locusID);
+		
 			$sysInfoSQL = "SELECT mss.solarSystemName, mr.regionName, mc.constellationName, "
 				. "mlwc.wormholeClassID, mss.security AS trueSec, it.typeName, it.typeID, mdn.* "
 				. "FROM ".EVEDB_NAME.".mapDenormalize mdn "
@@ -33,6 +34,7 @@
 				. "LEFT JOIN ".EVEDB_NAME.".mapSolarSystems mss USING(solarSystemID) "
 				. "LEFT JOIN ".EVEDB_NAME.".invTypes it USING(typeID) "
 				. "WHERE mdn.solarSystemID = (SELECT itemID FROM ".EVEDB_NAME.".mapDenormalize WHERE itemName LIKE '" . $locusID . "')";
+			//printf("<p>%s</p>",$sysInfoSQL);
 			$rsSysInfo = mysql_query_cache($sysInfoSQL, $whConn);
 			if (is_array($rsSysInfo)) {
 				if (!empty($rsSysInfo)) {

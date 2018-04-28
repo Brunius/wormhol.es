@@ -1,6 +1,5 @@
 <?php
-	//error_reporting(E_ERROR | E_WARNING | E_PARSE);
-	ini_set('error_reporting', E_ALL|E_STRICT);
+	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	ini_set('display_errors',1);
 	ini_set('set_time_limit',60);
 	ini_set('max_execution_time',60);
@@ -76,7 +75,7 @@
 	}
 	//if (strlen(trim($n_SearchFor)) < 1 && $isTrusted) {
 		// If website is trusted, and user hasn't entered a locus to search, populate it
-		//$n_SearchFor = trim(mysqli_real_escape_string($whConn, $_SERVER["HTTP_EVE_SOLARSYSTEMNAME"]));	
+		//$n_SearchFor = trim(mysql_real_escape_string($_SERVER["HTTP_EVE_SOLARSYSTEMNAME"]));	
 	//}
 ?>
 <body>

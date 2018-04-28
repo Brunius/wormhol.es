@@ -99,7 +99,7 @@
 			}
 		} else {
 			// Not a valid locus
-			$whTxt = sprintf('<div class="iH sW">%s</div> is not a valid locus 2 ID.', $n_LocusID);
+			$whTxt = sprintf('<div class="iH sW">%s</div> is not a valid locus ID.', $n_LocusID);		
 		}
 		echo $whTxt;
 	// ========================================================================
@@ -340,7 +340,7 @@
 			printf('<tr class="ftr"><td class="data_r">%d</td><td></td><td class="data_r">%d</td></tr>', $aTempWH->getPlanetCount(), $aTempWH->getMoonCount());
 			printf('</table>');
 		} else {
-			printf("<p><b>%s</b> is not a valid locus 1 ID.</p>", $n_LocusID);	
+			printf("<p><b>%s</b> is not a valid locus ID.</p>", $n_LocusID);	
 		}
 	// ========================================================================
 	} elseif ($action == "intel_whanom") {

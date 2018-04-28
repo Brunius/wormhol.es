@@ -5,9 +5,6 @@
 	const EVEDB_NAME = 'evedb_inf11';
 	const WHDB_NAME = 'whdata';
 	
-	ini_set('error_reporting', E_ALL|E_STRICT);
-	ini_set('display_errors', 1);
-
 	function db_open() {
 		global $whConn;
 		// Note: Apache presents $_ENV as $_SERVER instead (annoying)

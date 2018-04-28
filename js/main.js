@@ -59,7 +59,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$.getJSON("js/eve_solar_systems.json", function(data) {			   
+	$.getJSON("js/eve_solar_systems.json", function(data) {	
 		$("INPUT#searchFor").autocomplete({ 
 			delay: 150,
 			minLength: 2,
